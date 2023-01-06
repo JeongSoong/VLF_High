@@ -16,7 +16,7 @@ void setup()
 
 void loop()
 {
-  digitalWrite(IN1, HIGH);
+  digitalWrite(IN1, HIGH);//직진
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
@@ -24,7 +24,7 @@ void loop()
   analogWrite(ENB, 130);
   delay(2000);
 
-  digitalWrite(IN1, HIGH);
+  digitalWrite(IN1, HIGH);//우로 회전
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
@@ -32,7 +32,7 @@ void loop()
   analogWrite(ENB, 130);
   delay(1300);
 
-  digitalWrite(IN1, LOW);
+  digitalWrite(IN1, LOW);//좌로회전
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
@@ -40,7 +40,7 @@ void loop()
   analogWrite(ENB, 130);
   delay(1400);
 
-  digitalWrite(IN1, LOW);
+  digitalWrite(IN1, LOW);//후진
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
