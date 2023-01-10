@@ -136,7 +136,7 @@ void loop()
              analogWrite(ENAPin, 130);
              analogWrite(ENBPin, 130);
              break;
-    case 2 :     //좌회전
+    case 2 :     //우회전
             digitalWrite(IN1Pin, HIGH);
             digitalWrite(IN2Pin, LOW);
             digitalWrite(IN3Pin, HIGH);
@@ -144,7 +144,7 @@ void loop()
             analogWrite(ENAPin, 130);
             analogWrite(ENBPin, 130);
             break;
-    case 4 :     //좌회전
+    case 4 :     //우회전
             digitalWrite(IN1Pin, HIGH);
             digitalWrite(IN2Pin, LOW);
             digitalWrite(IN3Pin, HIGH);
@@ -152,7 +152,7 @@ void loop()
             analogWrite(ENAPin, 130);
             analogWrite(ENBPin, 130);
             break;                  
-    case -2 :     //우회전
+    case -2 :     //좌회전
            digitalWrite(IN1Pin, LOW);
            digitalWrite(IN2Pin, HIGH);
            digitalWrite(IN3Pin, LOW);
@@ -160,7 +160,7 @@ void loop()
            analogWrite(ENAPin, 130);
            analogWrite(ENBPin, 130);
            break;
-    case -4  :    //우회전
+    case -4  :    //좌회전
            digitalWrite(IN1Pin, LOW);
            digitalWrite(IN2Pin, HIGH);
            digitalWrite(IN3Pin, LOW);
@@ -168,7 +168,7 @@ void loop()
            analogWrite(ENAPin, 130);
            analogWrite(ENBPin, 130);
            break;
-    case -3 :     //우회전
+    case -3 :     //좌회전
            digitalWrite(IN1Pin, LOW);
            digitalWrite(IN2Pin, HIGH);
            digitalWrite(IN3Pin, LOW);
@@ -176,7 +176,7 @@ void loop()
            analogWrite(ENAPin, 130);
            analogWrite(ENBPin, 130);
            break;
-    case -1 :     //우회전
+    case -1 :     //좌회전
            digitalWrite(IN1Pin, LOW);
            digitalWrite(IN2Pin, HIGH);
            digitalWrite(IN3Pin, LOW);
@@ -184,7 +184,7 @@ void loop()
            analogWrite(ENAPin, 130);
            analogWrite(ENBPin, 130);
            break;
-    case 1 :     //좌회전
+    case 1 :     //우회전
            digitalWrite(IN1Pin, HIGH);
             digitalWrite(IN2Pin, LOW);
             digitalWrite(IN3Pin, HIGH);
@@ -192,7 +192,7 @@ void loop()
             analogWrite(ENAPin, 130);
             analogWrite(ENBPin, 130);
             break;
-    case 3 :     //좌회전
+    case 3 :     //회전
            digitalWrite(IN1Pin, HIGH);
             digitalWrite(IN2Pin, LOW);
             digitalWrite(IN3Pin, HIGH);
