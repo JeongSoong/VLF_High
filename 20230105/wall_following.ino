@@ -38,7 +38,7 @@ NewPing sonar[3] =
   
 };
 
-void motor_control(int direction, int speed1, int speed2)    //방향 속도 1: 전진 2: 후진 3: 정지
+void motor_control(int direction,int speed1, int speed2)    //방향 속도 1: 전진 2: 후진 3: 정지
 {
   switch(direction)
   {
@@ -46,8 +46,8 @@ void motor_control(int direction, int speed1, int speed2)    //방향 속도 1: 
             digitalWrite(IN2, LOW);
             digitalWrite(IN3, LOW);
             digitalWrite(IN4, HIGH);           
-            analogWrite(ENA, 80);
-            analogWrite(ENB, 80);
+            analogWrite(ENA, speed1);
+            analogWrite(ENB, speed2);
             break;
             
     case 2: digitalWrite(IN1, LOW); //좌로회전
@@ -102,28 +102,16 @@ void setup()
 
 void loop() 
 {
-  
-  float p_gain =1.3;
-  
   read_sonar_sensor();
   update_sonar_error();
   update_sonar_old();
-  motor_diff = R_Sonar_Error * p_gain; 
  
     Serial.print(R_Sonar_Distance); Serial.print("\t");
     Serial.print(R_Sonar_Distance_old); Serial.print("\t");
     Serial.println(R_Sonar_Error);
-    if(R_Sonar_Error > 0)
-    {
-      motor_control(3,70+motor_diff,70-motor_diff);
-    }
+   
 
-    if(R_Sonar_Error < 0)
-    {
-      motor_control(2,70+motor_diff,70-motor_diff);
-    }
-
-    motor_control(1,70+motor_diff,70-motor_diff);
+    motor_control(1,70+R_Sonar_Error*4,100-R_Sonar_Error*3);
     
     delay(100);
   
